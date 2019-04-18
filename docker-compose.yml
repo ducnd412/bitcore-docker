@@ -1,0 +1,7 @@
+version: '3'
+services:
+  bitcore-node:
+    build: .
+    image: bitcore-node
+    ports:
+      - 3001:3001
