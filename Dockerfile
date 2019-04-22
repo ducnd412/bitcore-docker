@@ -10,4 +10,4 @@ WORKDIR /home/root
 RUN npm install bitcore@4.1.1
 
 RUN echo "Object.defineProperty(global, '_bitcore', { get(){ return undefined }, set(){} })" >> /home/root/node_modules/bitcore/bin/bitcored
-CMD ["//home/root/node_modules/bitcore/bin/bitcored"]
+CMD ["/home/root/node_modules/bitcore/bin/bitcored"]
