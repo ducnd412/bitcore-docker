@@ -7,10 +7,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe restricted m
 EXPOSE 3001
 
 WORKDIR /home/root
-#COPY package.json .
 RUN npm install bitcore@4.1.1
-#COPY bitcoin.conf .
-
 
 RUN echo "Object.defineProperty(global, '_bitcore', { get(){ return undefined }, set(){} })" >> /home/root/node_modules/bitcore/bin/bitcored
 CMD ["//home/root/node_modules/bitcore/bin/bitcored"]
